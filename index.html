@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ulang Tahun Dea Apriliani</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    /* Animasi judul */
+    .animated-heading {
+      display: inline-block;
+      position: relative;
+    }
+    .animated-heading:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: #007bff; /* Warna border */
+      transition: width 0.3s ease;
+      transform: scaleX(0); /* Awalnya tidak terlihat */
+      transform-origin: bottom right;
+    }
+    .animated-heading:hover:after {
+      width: 100%;
+      transform-origin: bottom left;
+      transform: scaleX(1); /* Munculkan border */
+    }
+    /* Footer */
+    .footer {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .social-links {
+      margin-bottom: 20px;
+    }
+    .social-links a {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mb-4 animated-heading">Selamat Ulang Tahun Dea!</h1>
+    <div class="image">
+      <img src="dea.jpg" alt="Dea Apriliani" class="img-fluid rounded-circle mb-4">
+    </div>
+    <button id="messageButton" class="btn btn-primary btn-lg">Buka Pesan</button>
+    <a id="giftButton" class="btn btn-success btn-lg d-none" href="https://wa.me/62895351427700?text=mana%20hadiahnya">Hadiah</a>
+    <div id="flowers" class="d-none">
+      <img src="bg1.jpg" alt="Bunga" class="flower">
+      <img src="bg2.jpg" alt="Bunga" class="flower">
+      <img src="bg3.jpg" alt="Bunga" class="flower">
+    </div>
+    <audio id="backgroundMusic" src="dea.mp3" preload="auto"></audio>
+    <div id="message" class="message collapse">
+      <p class="mt-4">Selamat bertambah umur Dea, semoga kamu menjadi dewasa yang tetap bijak dan tetap semangat dalam mengejar tujuanmu. Jangan lupa untuk tetap menyenangkan ya!</p>
+    </div>
+  </div>
+  
+        <footer class="bg-dark text-white">
+            <div class="container pt-4 pb-2">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="mb-4">Follow Us:</h5>
+                        <ul class="list-unstyled list-inline social-icons">
+                            <li class="list-inline-item">
+                                <a
+                                    href="https://www.instagram.com/dayud__"
+                                    class="text-white"
+                                    ><i class="bi bi-instagram"></i
+                                ></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a
+                                    href="https://www.tiktok.com/@sinyalbending"
+                                    class="text-white"
+                                    ><i class="bi bi-tiktok"></i
+                                ></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a
+                                    href="https://www.youtube.com/@pemalasmasakini"
+                                    class="text-white"
+                                    ><i class="bi bi-youtube"></i
+                                ></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a
+                                    href="https://www.facebook.com/muhammad.vanz.9"
+                                    class="text-white"
+                                    ><i class="bi bi-facebook"></i
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <p class="mb-0">
+                            &copy; 2024 dayud. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </footer>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#messageButton").click(function(){
+        $("#message").collapse('toggle');
+        $(this).hide(); // Sembunyikan tombol "Buka Pesan"
+        $("#giftButton").removeClass('d-none'); // Tampilkan tombol "Hadiah"
+        // Putar musik
+        var audio = document.getElementById("backgroundMusic");
+        audio.play();
+      });
+
+      // Tidak perlu lagi fungsi click untuk tombol hadiah
+    });
+  </script>
+</body>
+</html>

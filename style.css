@@ -1,0 +1,70 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('deabg.jpg'); /* Ganti URL dengan gambar kucing yang lucu */
+  backface-visibility: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #f0f0f0; /* Fallback color jika gambar tidak dimuat */
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Opacity pada bagian konten */
+  border-radius: 20px;
+}
+
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.message p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Animasi tombol */
+.btn-primary {
+  transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.1);
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.message p {
+  font-size: 18px;
+  line-height: 1.6;
+  animation: slideIn 4s ease-in-out;
+}
+.flower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  transition: transform 2s ease-in-out;
+}
+
+.flower-animation {
+  transform: translateY(100vh) rotate(360deg);
+}
